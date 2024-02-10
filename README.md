@@ -10,8 +10,10 @@ Many applications like noise quantification and signal stability analysis benefi
 ## Measurement rate instability
 Ideally, the PAX1000 should take measurements evenly spaced in time - if the measurement rate is 20Hz, it should take a measurement every 0.05 seconds. Especially for higher measurement rates on the PAX (>80Hz), this "time difference between points" (TDBP) does not live up to expectations, and is furthermore widely varying throughout a given run, no matter the circumstances.
 
-Below is an example of poor behavior in a typical dataset. A segment of the measurements themselves are shown in the upper plot, while the lower plot shows a histogram of the TDBP (time difference between points).
+Below is an example of poor behavior in a typical dataset. A segment of the measurements themselves are shown in the upper plot, while the lower plot shows a log-scale histogram of the TDBP (time difference between points) for the entire run. On the histogram, I displayed the parameters used by the PAX, the resulting nominal measurement rate and TDBP, and the actual measurement rate and TDBP, as well as the standard deviation of the TDBP. The nominal TDBP, actual TDBP, and STD of the TDBP are all plotted in corresponding colors for easy viewing.
 
-![Measurement plot](images/meas_1.png "Measurement plot")
+![Measurement plot](pax_hist_photos/meas_1.png "Measurement plot")
 
-![Histogram plot](images/hist_1.png "Histogram plot")
+![Histogram plot](pax_hist_photos/hist_1.png "Histogram plot")
+
+Note that
