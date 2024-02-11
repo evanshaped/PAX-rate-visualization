@@ -6,8 +6,8 @@ The THORLABS PAX1000 digital polarimeter is a rotating wave plate based polarime
 Many signal processing applications like noise quantification and signal stability analysis benefit from (if not require) evenly spaced points and high measurement rate to obtain accurate and useful results. The [Allan Deviation](https://en.wikipedia.org/wiki/Allan_variance) metric, for example, provides much less reliable noise quantification information when its input data points are not evenly spaced in time; I was only able to make use of this metric after understanding the measurement rate of the datasets I was taking.
 
 This repository contains code I wrote to easily quantify and visualize the PAX's measurement rate (or more acurately, the time difference between points (tdbp)). It helped me to understand the quality and utility of my datasets, and may be of further use for others wishing to do the same.
-<!-- Include picture of PAX, sample dataset with varying rate consistency, and rate histogram. -->
-<!-- ![OpenAI Logo](https://example.com/openai_logo.png "OpenAI") -->
+
+TODO: Include picture of PAX
 
 ## Measurement rate variability
 Ideally, the PAX1000 should take measurements evenly spaced in time - if the measurement rate is 20Hz, it should take a measurement every 0.05 seconds. Especially for higher measurement rates on the PAX (>80Hz), this "time difference between points" (TDBP) does not live up to expectations, and is furthermore widely varying throughout a given run.
@@ -37,4 +37,13 @@ Here is another dataset taken minutes before example 1. The only difference is t
 Interestingly, we sometimes obtain spacing between points that is less than the nominal value (faster than expected), but larger gaps balance them out to keep the average tdbp at the nominal value. This suggests that the PAX software that records timestamped measurements may have trouble managing resources, occasinally slowing down or speeding up based on computational intensity (note: this problem persists on both PAX1000 polarimeters I have access to, on two laptops and one desktop running the software, with no other programs running and the PAX software priority set to very high).
 
 ## Code
-The code for these visualization tools are located in the jupyter notebook
+These visualization tools can be interacted with in the [jupyter notebook](PAX_Code_Notebook.ipynb).
+
+The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. A few example datasets including the ones displayed above are provided.
+
+The method "Dataset.rate_hist()" will plot a histogram of the tdbp for the entire dataset; you can plot this histogram with a log-scale or linear-scale y-axis and with greater or fewer bins depending on the number of measurements you have access to. The method "Dataset.plot()" allows you to view the the measured parameters over the entirety or during any segment of the run. See the notebook for further details.
+
+### Obtaining .csv file from PAX software
+This code relies on the dataset comming from the PAX1000 software.
+
+TODO: Pictures, guide for getting dataset
