@@ -37,7 +37,7 @@ Here is another dataset taken minutes before example 1. The only difference is t
 Interestingly, we sometimes obtain spacing between points that is less than the nominal value (faster than expected), but larger gaps balance them out to keep the average tdbp at the nominal value. This suggests that the PAX software that records timestamped measurements may have trouble managing resources, occasinally slowing down or speeding up based on computational intensity (note: this problem persists on both PAX1000 polarimeters I have access to, on two laptops and one desktop running the software, with no other programs running and the PAX software priority set to very high).
 
 ## Code
-These visualization tools can be interacted with in the [jupyter notebook](PAX_Code_Notebook.ipynb).
+These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook.ipynb).
 
 The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. A few example datasets including the ones displayed above are provided.
 
