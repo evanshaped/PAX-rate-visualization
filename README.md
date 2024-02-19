@@ -29,13 +29,18 @@ The above figure shows 1 second of time-domain SOP measurements; the quantities 
 The above figure shows the log-histogram of the TBS distribution, highlighting the variability in sample rate and rare but exceedingly long TBS ocurrences. This histogram utilizes the full 120 seconds of data from this run. PAX operating mode parameters (see [manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2)) are printed in the upper right-hand corner. Also printed and plotted are the configured sample rate (red, dashed), and the mean (blue, dashed) and standard deviation (purple, solid) of the TBS distrubution.
 
 ### Example 2
-The only difference is that the nominal measurement rate has been quartered from 200Hz to 50Hz. Even though the average tdbp now reaches the nominal value, there is still a wide spread in the values, and large gaps many times the average tdbp.
-
 ![Measurement plot](pax_hist_photos/meas_2.png "Measurement plot")
 
 <!-- ![Histogram plot](pax_hist_photos/hist_nolog_2.png "Histogram plot") -->
 
 ![Log Histogram plot](pax_hist_photos/hist_2.png "Log Histogram plot")
+
+### Example 3
+![Measurement plot](pax_hist_photos/meas_3.png "Measurement plot")
+
+<!-- ![Histogram plot](pax_hist_photos/hist_nolog_3.png "Histogram plot") -->
+
+![Log Histogram plot](pax_hist_photos/hist_3.png "Log Histogram plot")
 
 ## Code
 These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook.ipynb).
@@ -48,3 +53,6 @@ The method "Dataset.rate_hist()" will plot a histogram of the tdbp for the entir
 This code relies on the dataset comming from the PAX1000 software.
 
 TODO: Pictures, guide for getting dataset
+
+
+Keywords: PAX1000VIS, PAX1000IR1, PAX1000IR2, Thorlabs, rotating wave-plate polarimeter
