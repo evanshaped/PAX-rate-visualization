@@ -17,7 +17,7 @@ We report on measurements of the PAX1000IR2 with the following configuration.
 ## Measurement rate variability
 Salient configuration parameters are the Sample Rate and Operating Mode (including period and FFT points); see [PAX operation manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2) for details. These are selected via the Thorlabs GUI. State of Polarization (SOP) data were acquired using the Thorlabs GUI and saved as .CSV. We get qualitatively similar results using a second PAX1000IR2 and different Windows PCs.
 
-### Example 1
+### Example and explanation
 ![Measurement plot](pax_hist_photos/meas_1.png "Measurement plot")
 
 The above figure shows 1 second of time-domain SOP measurements; the quantities displayed are the normalized [Stokes parameters](https://en.wikipedia.org/wiki/Stokes_parameters). Note the irregular distribution in time between samples (TBS).
@@ -28,19 +28,13 @@ The above figure shows 1 second of time-domain SOP measurements; the quantities 
 
 The above figure shows the log-histogram of the TBS distribution, highlighting the variability in sample rate and rare but exceedingly long TBS ocurrences. This histogram utilizes the full 120 seconds of data from this run. PAX operating mode parameters (see [manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2)) are printed in the upper right-hand corner. Also printed and plotted are the configured sample rate (red, dashed), and the mean (blue, dashed) and standard deviation (purple, solid) of the TBS distrubution.
 
-### Example 2
-![Measurement plot](pax_hist_photos/meas_2.png "Measurement plot")
-
-<!-- ![Histogram plot](pax_hist_photos/hist_nolog_2.png "Histogram plot") -->
+### Other examples
 
 ![Log Histogram plot](pax_hist_photos/hist_2.png "Log Histogram plot")
 
-### Example 3
-![Measurement plot](pax_hist_photos/meas_3.png "Measurement plot")
-
-<!-- ![Histogram plot](pax_hist_photos/hist_nolog_3.png "Histogram plot") -->
-
 ![Log Histogram plot](pax_hist_photos/hist_3.png "Log Histogram plot")
+
+![Log Histogram plot](pax_hist_photos/hist_4.png "Log Histogram plot")
 
 ## Code
 These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook.ipynb).
