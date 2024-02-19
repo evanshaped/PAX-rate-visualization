@@ -5,14 +5,14 @@ The THORLABS PAX1000 digital polarimeter is a rotating wave plate polarimeter wi
 
 We report on measurements of the PAX1000IR2 with the following configuration.
 * USBx interface
-* Windows __ PC that meets the minimal hardware requirements detailed in the User Manual
-* Thorlabs GUI and Drivers v 1.4
-* Firmware Version (see .CSV datafile)
+* Windows 10 PC that meets the minimal hardware requirements detailed in the [User Manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2)
+* Thorlabs GUI and Drivers version 1.2/1.3 (see .CSV datafile)
+* Firmware Version 1.0.13 (see .CSV datafile)
 * external DS15 power supply
-* 1345 nm laser light fiber-coupled to the PAX
-** Single-mode laser with linewidth of ____
+* 1345 nm or 1560 nm laser light fiber-coupled to the PAX
+** Single-mode laser with linewidth of 0.4 kHz (1560), __ kHz (1345)
 ** 10 mW maximum power applied to PAX
-* PAX alignment tool reports _% alignment
+* PAX alignment tool reports 99.55% alignment
 
 ## Measurement rate variability
 Salient configuration parameters are the Sample Rate and Operating Mode (including period and FFT points); see [PAX operation manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2) for details. These are selected via the Thorlabs GUI. State of Polarization (SOP) data were acquired using the Thorlabs GUI and saved as .CSV. We get qualitatively similar results using a second PAX1000IR2 and different Windows PCs.
@@ -39,14 +39,9 @@ The above figure shows the log-histogram of the TBS distribution, highlighting t
 ## Code
 These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook.ipynb).
 
-The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. A few example datasets including the ones displayed above are provided.
+The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. Example datasets are provided.
 
 The method "Dataset.rate_hist()" will plot a histogram of the tdbp for the entire dataset; you can plot this histogram with a log-scale or linear-scale y-axis and with greater or fewer bins depending on the number of measurements you have access to. The method "Dataset.plot()" allows you to view the the measured parameters over the entirety or during any segment of the run. See the notebook for further details.
-
-### Obtaining .csv file from PAX software
-This code relies on the dataset comming from the PAX1000 software.
-
-TODO: Pictures, guide for getting dataset
 
 
 Keywords: PAX1000VIS, PAX1000IR1, PAX1000IR2, Thorlabs, rotating wave-plate polarimeter
