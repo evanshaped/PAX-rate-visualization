@@ -37,7 +37,7 @@ The above figure shows the log-histogram of the TBS distribution, highlighting t
 ![Log Histogram plot](pax_hist_photos/hist_4.png "Log Histogram plot")
 
 ## Code
-These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook.ipynb).
+These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook_Github.ipynb).
 
 The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. Example datasets are provided.
 
