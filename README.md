@@ -6,7 +6,7 @@ The THORLABS PAX1000 digital polarimeter is a rotating wave plate polarimeter wi
 We report on measurements of the PAX1000IR2 with the following configuration.
 * USBx interface
 * Windows 10 PC that meets the minimal hardware requirements detailed in the [User Manual](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAX1000IR2)
-* Thorlabs GUI and Drivers version 1.2/1.3 (see .CSV datafile)
+* ThorLABS GUI and Drivers version 1.2/1.3 (see .CSV datafile)
 * Firmware Version 1.0.13 (see .CSV datafile)
 * external DS15 power supply
 * 1345 nm or 1560 nm laser light fiber-coupled to the PAX
@@ -37,11 +37,7 @@ The above figure shows the log-histogram of the TBS distribution, highlighting t
 ![Log Histogram plot](pax_hist_photos/hist_4.png "Log Histogram plot")
 
 ## Code
-These visualization tools can be interacted with in the [jupyter notebook](PAX_code/PAX_Code_Notebook_Github.ipynb).
-
-The Dataset class contains all relevant code for cleaning and visualizing the .csv file output from the PAX1000 software. Initializing a Dataset instance with the path to your file will automatically read in the data and relevant parameters from the run. Example datasets are provided.
-
-The method "Dataset.rate_hist()" will plot a histogram of the tdbp for the entire dataset; you can plot this histogram with a log-scale or linear-scale y-axis and with greater or fewer bins depending on the number of measurements you have access to. The method "Dataset.plot()" allows you to view the the measured parameters over the entirety or during any segment of the run. See the notebook for further details.
+The code for these visualization tools can be viewed in the [jupyter notebook](PAX_code/PAX_Code_Notebook_Github.ipynb). The notebook may easily be downloaded for personal interaction; all that is required is the .csv datafile, obtained from the "long-term measurement" tool in the ThorLABS PAX1000 GUI. Example datasets and code are provided, showing how to create and customize the TBS histogram.
 
 
 Keywords: PAX1000VIS, PAX1000IR1, PAX1000IR2, Thorlabs, rotating wave-plate polarimeter
