@@ -10,8 +10,8 @@ We report on measurements of the PAX1000IR2 with the following configuration.
 * Firmware Version 1.0.13 (see .CSV datafile)
 * external DS15 power supply
 * 1345 nm or 1560 nm laser light fiber-coupled to the PAX
-** Single-mode laser with linewidth of 0.4 kHz (1560), __ kHz (1345)
-** 10 mW maximum power applied to PAX
+  * Single-mode laser with linewidth of 0.4 kHz (1560), __ kHz (1345)
+  * 10 mW maximum power applied to PAX
 * PAX alignment tool reports 99.55% alignment
 
 ## Measurement rate variability
